@@ -18,12 +18,9 @@
     "build": "expo-module build",
     "clean": "expo-module clean",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "expo-module prepare && husky install",
     "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "expo-module": "expo-module"
   },
   "sideEffects": false,
   "devDependencies": {
@@ -32,8 +29,7 @@
     "@types/fs-extra": "^11.0.1",
     "expo": "^48.0.0",
     "expo-module-scripts": "^3.0.4",
-    "husky": "^8.0.3",
-    "pinst": "^3.0.0"
+    "husky": "^8.0.0"
   },
   "peerDependencies": {
     "expo": ">=48.0.0"
