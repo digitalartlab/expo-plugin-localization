@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.1...v0.1.2) (2023-04-15)
+
+
+### Bug Fixes
+
+* set up Yarn for package publishing ([b03e481](https://github.com/digitalartlab/expo-plugin-localization/commit/b03e4811db635b53e6c1b67d7e914b1714911cc7))
+
 ## [0.1.1](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.0...v0.1.1) (2023-04-15)
 
 
