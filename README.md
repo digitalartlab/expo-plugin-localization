@@ -4,9 +4,9 @@
 
 Support native iOS language switching in your Expo app.
 
-## Motivation
-
 Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. This plugin adds _very basic and slightly hacky_ support for that.
+
+The plugin creates placeholder translation files and references to those files in your Xcode project. Those references are then used by iOS to determine which languages your app supports. When the user changes the language in the Settings app, iOS will then switch the language of your app. The actual translations are handled by you, for example using [i18next](https://www.i18next.com/) and Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module, outside of this plugin.
 
 ## Installation
 
@@ -61,4 +61,4 @@ This project is licensed under the LGPL-3.0 License - see the [LICENSE](LICENSE)
 
 ## Author
 
-- Thijmen de Valk ([@thijmenvdvalk](https://github.com/thijmenvdvalk))
+Thijmen de Valk ([@thijmenvdvalk](https://github.com/thijmenvdvalk))

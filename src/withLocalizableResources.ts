@@ -2,6 +2,10 @@ import { ConfigPlugin, withDangerousMod } from "expo/config-plugins";
 import * as fs from "fs";
 import * as path from "path";
 
+/**
+ * Adds the actual Localizable.strings files to the iOS project folder. These files are empty and are only used to satisfy Xcode.
+ * This is a dangerous mod because it writes to the file system.
+ */
 export const withLocalizableResources: ConfigPlugin<{
   knownRegions: string[];
 }> = (config, { knownRegions }) => {
