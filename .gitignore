@@ -2,3 +2,4 @@
 !.yarn/releases
 !.yarn/plugins
 node_modules
+build
