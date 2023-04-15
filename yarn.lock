@@ -1720,7 +1720,7 @@ __metadata:
     "@types/fs-extra": ^11.0.1
     expo: ^48.0.0
     expo-module-scripts: ^3.0.4
-    husky: ^8.0.3
+    husky: ^8.0.0
     pinst: ^3.0.0
   peerDependencies:
     expo: ">=48.0.0"
@@ -5782,7 +5782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.3":
+"husky@npm:^8.0.0":
   version: 8.0.3
   resolution: "husky@npm:8.0.3"
   bin:

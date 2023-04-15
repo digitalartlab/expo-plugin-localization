@@ -31,7 +31,7 @@
     "@types/fs-extra": "^11.0.1",
     "expo": "^48.0.0",
     "expo-module-scripts": "^3.0.4",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "pinst": "^3.0.0"
   },
   "peerDependencies": {
@@ -42,5 +42,8 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
