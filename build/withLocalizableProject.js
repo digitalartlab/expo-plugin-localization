@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withLocalizableProject = void 0;
 const config_plugins_1 = require("expo/config-plugins");
+/**
+ * Adds a Localizable.strings file reference to the Xcode project for each region. This is necessary for Xcode to recognize the various languages.
+ */
 const withLocalizableProject = (config, { knownRegions }) => {
     return (0, config_plugins_1.withXcodeProject)(config, async (config) => {
         const xcodeProject = config.modResults;

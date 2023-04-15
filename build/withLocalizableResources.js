@@ -27,6 +27,10 @@ exports.withLocalizableResources = void 0;
 const config_plugins_1 = require("expo/config-plugins");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
+/**
+ * Adds the actual Localizable.strings files to the iOS project folder. These files are empty and are only used to satisfy Xcode.
+ * This is a dangerous mod because it writes to the file system.
+ */
 const withLocalizableResources = (config, { knownRegions }) => {
     const RESOURCES = "Resources";
     return (0, config_plugins_1.withDangerousMod)(config, [
