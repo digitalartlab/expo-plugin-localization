@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.0...v0.1.1) (2023-04-15)
+
+
+### Bug Fixes
+
+* husky runs on package install ([d6658ba](https://github.com/digitalartlab/expo-plugin-localization/commit/d6658ba861a3494150429f64c992a5560f76e2cc))
+
 ## 0.1.0 (2023-04-15)
 
 
