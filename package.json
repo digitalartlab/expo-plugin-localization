@@ -13,14 +13,16 @@
   "bugs": {
     "url": "https://github.com/digitalartlab/expo-plugin-localization/issues"
   },
-  "private": false,
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
     "test": "expo-module test",
-    "prepare": "expo-module prepare && husky install",
+    "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module"
+    "expo-module": "expo-module",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "sideEffects": false,
   "devDependencies": {
@@ -29,7 +31,8 @@
     "@types/fs-extra": "^11.0.1",
     "expo": "^48.0.0",
     "expo-module-scripts": "^3.0.4",
-    "husky": "^8.0.0"
+    "husky": "^8.0.3",
+    "pinst": "^3.0.0"
   },
   "peerDependencies": {
     "expo": ">=48.0.0"
@@ -38,5 +41,6 @@
     "expo": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }
