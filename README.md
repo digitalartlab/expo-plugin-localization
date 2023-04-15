@@ -61,4 +61,4 @@ This project is licensed under the LGPL-3.0 License - see the [LICENSE](LICENSE)
 
 ## Author
 
-Thijmen de Valk ([@thijmenvdvalk](https://github.com/thijmenvdvalk))
+Thijmen de Valk ([@thijmendevalk](https://github.com/thijmendevalk))
