@@ -6,15 +6,16 @@ import * as path from "path";
  * Adds the actual Localizable.strings files to the iOS project folder. These files are empty and are only used to satisfy Xcode.
  * This is a dangerous mod because it writes to the file system.
  */
-export const withLocalizableResources: ConfigPlugin<{
-  knownRegions: string[];
-}> = (config, { knownRegions }) => {
-  const RESOURCES = "Resources";
+export const withIosLocalizableResources: ConfigPlugin<{
+  locales: string[];
+}> = (config, { locales }) => {
 
   return withDangerousMod(config, [
     "ios",
     (config) => {
       const projectRootPath = path.join(config.modRequest.platformProjectRoot);
+      const RESOURCES = "Resources";
+
       const destAlreadyExists = fs.existsSync(
         path.join(projectRootPath, RESOURCES)
       );
@@ -23,11 +24,11 @@ export const withLocalizableResources: ConfigPlugin<{
         fs.mkdirSync(path.join(projectRootPath, RESOURCES));
       }
 
-      knownRegions.forEach((region) => {
+      locales.forEach((locale) => {
         const destPath = path.join(
           projectRootPath,
           RESOURCES,
-          `${region}.lproj`
+          `${locale}.lproj`
         );
 
         const destAlreadyExists = fs.existsSync(destPath);
@@ -38,7 +39,7 @@ export const withLocalizableResources: ConfigPlugin<{
 
         fs.writeFileSync(
           path.join(destPath, "Localizable.strings"),
-          `/* ${region} */`
+          `/* ${locale} */`
         );
       });
 

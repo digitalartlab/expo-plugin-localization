@@ -1,18 +1,24 @@
 import { ConfigPlugin } from "expo/config-plugins";
 
-import { withLocalizableProject } from "./withLocalizableProject";
-import { withLocalizableResources } from "./withLocalizableResources";
+import { withIosLocalizableProject } from "./withIosLocalizableProject";
+import { withIosLocalizableResources } from "./withIosLocalizableResources";
+import { withAndroidLocalizableGradle } from "./withAndroidLocalizableGradle";
+import { withAndroidLocalizableManifest } from "./withAndroidLocalizableManifest";
+import { withAndroidLocalizableResources } from "./withAndroidLocalizableResources";
 
 /**
- * Adds references and placeholder files to the Xcode project for each region. This is necessary for iOS to show the language switcher in the Settings app.
+ * Adds references and placeholder files to the Xcode project for each locale. This is necessary for iOS to show the language switcher in the Settings app.
  */
-const withiOSLocalization: ConfigPlugin<{ knownRegions?: string[] }> = (
+const withLocalization: ConfigPlugin<{ locales?: string[] }> = (
   config,
-  { knownRegions = ["en"] }
+  { locales = ["en"] }
 ) => {
-  config = withLocalizableProject(config, { knownRegions });
-  config = withLocalizableResources(config, { knownRegions });
+  config = withIosLocalizableProject(config, { locales });
+  config = withIosLocalizableResources(config, { locales });
+  config = withAndroidLocalizableGradle(config, { locales });
+  config = withAndroidLocalizableManifest(config);
+  config = withAndroidLocalizableResources(config, { locales });
   return config;
 };
 
-export default withiOSLocalization;
+export default withLocalization;

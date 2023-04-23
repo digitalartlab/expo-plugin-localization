@@ -1,17 +1,17 @@
 import { ConfigPlugin, withXcodeProject } from "expo/config-plugins";
 
 /**
- * Adds a Localizable.strings file reference to the Xcode project for each region. This is necessary for Xcode to recognize the various languages.
+ * Adds a Localizable.strings file reference to the Xcode project for each locale. This is necessary for Xcode to recognize the various languages.
  */
-export const withLocalizableProject: ConfigPlugin<{
-  knownRegions: string[];
-}> = (config, { knownRegions }) => {
+export const withIosLocalizableProject: ConfigPlugin<{
+  locales: string[];
+}> = (config, { locales }) => {
   return withXcodeProject(config, async (config) => {
     const xcodeProject = config.modResults;
-    knownRegions.forEach((region) => {
-      // Add the region to the project
+    locales.forEach((locale) => {
+      // Add the locale to the project
       // Deduplication is handled by the function
-      xcodeProject.addKnownRegion(region);
+      xcodeProject.addKnownRegion(locale);
     });
 
     xcodeProject.addPbxGroup("Resources", "Resources");
@@ -21,10 +21,10 @@ export const withLocalizableProject: ConfigPlugin<{
     );
     const localizationVariantGpKey = localizationVariantGp.fileRef;
 
-    knownRegions.forEach((region) => {
-      // Create a file reference for each region
+    locales.forEach((locale) => {
+      // Create a file reference for each locale
       xcodeProject.addResourceFile(
-        `Resources/${region}.lproj/Localizable.strings`,
+        `Resources/${locale}.lproj/Localizable.strings`,
         { variantGroup: true },
         localizationVariantGpKey
       );
