@@ -3,11 +3,11 @@
 [![npm version](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization.svg)](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-This plugin adds support for per-app language switching on iOS and Android through the Settings app using the OS's native language switching functionalities.
+Per-app language switching on iOS and Android through the Settings app using the OS's native language switching functionalities for your Expo app.
 
-Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. That might result in you displaying the wrong language to the user. This plugin taps into the native language switching functionalities of iOS and Android to give control back to the user for the language of your app.
+Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. That might result in you displaying the wrong language to the user. Ever tried to order plane tickets in Spanish because the app decided you totally spoke it? Yeah, not fun. 
 
-This plugin creates the necessary files and references in your Xcode and Android Studio projects to support native language switching on iOS and Android. It does not handle the actual translations. You can use any library you want for that, for example [i18next](https://www.i18next.com/) and Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module.
+This plugin creates the necessary files and references in your Xcode and Android Studio projects to support native language switching on iOS and Android. It does not handle the actual translations or fetching the locale in your app. You can use any library you want for that, like [i18next](https://www.i18next.com/) for the translation and [expo-localization](https://docs.expo.io/versions/latest/sdk/localization/) for the locale detection.
 
 ## Installation
 
@@ -17,7 +17,7 @@ Install the package with the Expo CLI:
 npx expo install @digitalartlab/expo-plugin-localization
 ```
 
-The Expo CLI automatically adds the plugin to your `app.json` file. You can also add it manually:
+Then add the plugin to your `app.json`:
 
 ```json
 {
@@ -29,7 +29,7 @@ The Expo CLI automatically adds the plugin to your `app.json` file. You can also
 
 ## Configuration
 
-You provide an array of locales that you want to support. The plugin will add those values to the Xcode projects. The default value is `["en"]`.
+You provide an array of locales that you want to support. The default value is `["en"]`.
 
 ```json
 {
@@ -46,12 +46,6 @@ You provide an array of locales that you want to support. The plugin will add th
 }
 ```
 
-## Usage
-
-Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module returns a sorted list of locales, as preferred by the user. This plugin lets the user change the language in the Settings app, which will then change the order of the locales. So, if a user's phone is set to Dutch and the app is set to English, the list of locales will be `["en", "nl"]` instead of `["nl", "en"]`.
-
-Basically: do what you'd already do to detect the user's language and just pick the first value Expo gives you.
-
 ### Supported languages
 This plugin supports all the two-letter language codes (`nl`, `en`, `es`, etc.) Android and iOS support.
 
@@ -63,11 +57,17 @@ If you use [prebuild](https://docs.expo.dev/workflow/prebuild/), you have to use
 
 Not using prebuild? You're good to go!
 
+## Usage
+
+Expo has a great [Localization guide](https://docs.expo.dev/guides/localization/) that explains how to fetch the user's current locale. This plugin doesn't change that, so you can use the same code. Behind the scenes, the OS sorts the list of locales to match the user's selection in the Settings app. So, if a user's phone is set to Dutch and the app is set to English, the list of locales will be `["en", "nl"]` instead of `["nl", "en"]`.
+
+Basically: do what you'd already do to detect the user's language and just pick the first value you get.
+
 ## Contributing
 
 Contributions are very welcome! Please take a moment to read our [Code of Conduct](https://github.com/digitalartlab/.github/blob/main/CODE_OF_CONDUCT.md) before contributing.
 
-## Development
+## Development on this plugin
 
 Run `yarn` to install the dependencies. This repo doesn't include an example Expo app, so you'll have to create one yourself. You can install a test build of this plugin in there by running `yarn pack` in this repo and `npm install <path>` in the example repo.
 

@@ -3,9 +3,9 @@
   "version": "0.1.3",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "author": "Digital Art Lab",
+  "author": "Digital Art Lab (https://digitalartlab.nl)",
   "license": "LGPL-3.0-or-later",
-  "description": "Native iOS language switching in your Expo app",
+  "description": "Native language switching in your Expo app",
   "keywords": [
     "expo",
     "expo-plugin",
