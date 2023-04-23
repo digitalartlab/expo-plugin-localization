@@ -29,9 +29,9 @@
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@types/fs-extra": "^11.0.1",
-    "expo": "^48.0.0",
-    "expo-module-scripts": "^3.0.4",
-    "husky": "^8.0.0",
+    "expo": "^48.0.11",
+    "expo-module-scripts": "^3.0.7",
+    "husky": "^8.0.3",
     "pinst": "^3.0.0"
   },
   "peerDependencies": {
@@ -42,5 +42,12 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "files": [
+    "build/**/*",
+    "app.plugin.js",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
 }
