@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.3...v1.0.0) (2023-04-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename `knownRegions` to `locales`
+
+### Features
+
+* add support for per-app language selection on Android 13+ ([eb58d2f](https://github.com/digitalartlab/expo-plugin-localization/commit/eb58d2fad8942129919d25f8e6e1c8d27f6ef5fa))
+
 ## [0.1.3](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.2...v0.1.3) (2023-04-23)
 
 

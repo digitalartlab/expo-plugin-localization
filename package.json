@@ -1,6 +1,6 @@
 {
   "name": "@digitalartlab/expo-plugin-localization",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "author": "Digital Art Lab (https://digitalartlab.nl)",
