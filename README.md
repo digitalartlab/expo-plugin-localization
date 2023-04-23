@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization.svg)](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-Support native iOS language switching in your Expo app.
+Native iOS language switching in your Expo app.
 
 Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. This plugin adds _very basic and slightly hacky_ support for that.
 

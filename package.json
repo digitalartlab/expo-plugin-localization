@@ -5,6 +5,15 @@
   "types": "build/index.d.ts",
   "author": "Digital Art Lab",
   "license": "LGPL-3.0-or-later",
+  "description": "Native iOS language switching in your Expo app",
+  "keywords": [
+    "expo",
+    "expo-plugin",
+    "expo-localization",
+    "localization",
+    "i18n",
+    "internationalization"
+  ],
   "homepage": "https://github.com/digitalartlab/expo-plugin-localization#readme",
   "repository": {
     "type": "git",
