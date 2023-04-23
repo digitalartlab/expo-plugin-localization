@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.2...v0.1.3) (2023-04-23)
+
+
+### Performance Improvements
+
+* make NPM package smaller ([1885350](https://github.com/digitalartlab/expo-plugin-localization/commit/18853507e503a0ea5f6ab9b8a75c26bf5ee266b5))
+
 ## [0.1.2](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.1...v0.1.2) (2023-04-15)
 
 
