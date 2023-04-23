@@ -3,11 +3,11 @@
 [![npm version](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization.svg)](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-Native iOS language switching in your Expo app.
+This plugin adds support for per-app language switching on iOS and Android through the Settings app using the OS's native language switching functionalities.
 
-Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. This plugin adds _very basic and slightly hacky_ support for that.
+Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module is great, but it doesn't support native language switching on iOS through the Settings app. That might result in you displaying the wrong language to the user. This plugin taps into the native language switching functionalities of iOS and Android to give control back to the user for the language of your app.
 
-The plugin creates placeholder translation files and references to those files in your Xcode project. Those references are then used by iOS to determine which languages your app supports. When the user changes the language in the Settings app, iOS will then switch the language of your app. The actual translations are handled by you, for example using [i18next](https://www.i18next.com/) and Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module, outside of this plugin.
+This plugin creates the necessary files and references in your Xcode and Android Studio projects to support native language switching on iOS and Android. It does not handle the actual translations. You can use any library you want for that, for example [i18next](https://www.i18next.com/) and Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) module.
 
 ## Installation
 
@@ -52,13 +52,24 @@ Expo's [Localization](https://docs.expo.io/versions/latest/sdk/localization/) mo
 
 Basically: do what you'd already do to detect the user's language and just pick the first value Expo gives you.
 
-## Known issues
+### Supported languages
+This plugin supports all the two-letter language codes (`nl`, `en`, `es`, etc.) Android and iOS support.
 
-Xcode spits out a warning about the translation files not being properly linked. It then also automatically _fixes_ that problem. So... good enough for now, I would say?
+Language codes with region and script affixes (`nl-NL`, `en-GB`, `zh-hans-CN`, etc.) are _not_ supported. This is because Android requires different formatting for language codes in various config files. If you _really_ need this, feel free to open an issue or a pull request.
+
+### Prebuild
+
+If you use [prebuild](https://docs.expo.dev/workflow/prebuild/), you have to use the `--clean` flag every time you change the config of this plugin. This is because the plugin can't reliably purge the old values from the config files. And you don't want a language to linger around. That's like Duolingo reminding you to practise long after you gave up!
+
+Not using prebuild? You're good to go!
 
 ## Contributing
 
 Contributions are very welcome! Please take a moment to read our [Code of Conduct](https://github.com/digitalartlab/.github/blob/main/CODE_OF_CONDUCT.md) before contributing.
+
+## Development
+
+Run `yarn` to install the dependencies. This repo doesn't include an example Expo app, so you'll have to create one yourself. You can install a test build of this plugin in there by running `yarn pack` in this repo and `npm install <path>` in the example repo.
 
 ## License
 
