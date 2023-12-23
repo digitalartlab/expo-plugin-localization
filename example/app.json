@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "expo-plugin-localization-example",
+    "slug": "expo-plugin-localization-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.modules.pluginlocalization.example"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "expo.modules.pluginlocalization.example"
+    },
+    "plugins": [["../app.plugin.js", { "locales": ["nl", "es", "en"] }]]
+  }
+}
