@@ -1,10 +1,10 @@
-package expo.modules.nativeconfiguration
+package expo.modules.pluginlocalization
 
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 import android.content.pm.PackageManager
 
-class ExpoNativeConfigurationModule() : Module() {
+class ExpoPluginLocalizationModule() : Module() {
   override fun definition() = ModuleDefinition {
     Name("ExpoPluginLocalization")
 
