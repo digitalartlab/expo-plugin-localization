@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.0.0...v1.1.0) (2023-12-23)
+
+
+### Features
+
+* get currently supported locales in app ([29a7310](https://github.com/digitalartlab/expo-plugin-localization/commit/29a731035110b99760d9dcb4c5ada7b019db022e))
+
 ## [1.0.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v0.1.3...v1.0.0) (2023-04-23)
 
 
