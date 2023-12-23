@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.1.0...v1.1.1) (2023-12-23)
+
+
+### Bug Fixes
+
+* can't build app due to wrong class names in native code ([8bdad3d](https://github.com/digitalartlab/expo-plugin-localization/commit/8bdad3deaebe21417d51fed6108683a89a7a30d3))
+
 ## [1.1.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.0.0...v1.1.0) (2023-12-23)
 
 
