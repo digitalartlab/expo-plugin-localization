@@ -69,7 +69,7 @@ Contributions are very welcome! Please take a moment to read our [Code of Conduc
 
 ## Development on this plugin
 
-Run `yarn` to install the dependencies. This repo doesn't include an example Expo app, so you'll have to create one yourself. You can install a test build of this plugin in there by running `yarn pack` in this repo and `npm install <path>` in the example repo.
+Run `npm install` to install the dependencies. This repo doesn't include an example Expo app, so you'll have to create one yourself. You can install a test build of this plugin in there by running `npm pack` in this repo and `npm install <path>` in the example repo.
 
 ## License
 
