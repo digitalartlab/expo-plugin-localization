@@ -1,4 +1,4 @@
-import * as ExpoNativeConfiguration from "expo-plugin-localization";
+import { getLocales } from "expo-plugin-localization";
 import { Text, View } from "react-native";
 
 export default function App() {
@@ -6,7 +6,7 @@ export default function App() {
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>
         Supported locales:{" "}
-        {ExpoNativeConfiguration.getLocales()
+        {getLocales()
           .map((locale) => locale)
           .join(", ")}
       </Text>

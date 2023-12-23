@@ -1,6 +1,6 @@
 import ExpoModulesCore
 
-public class ExpoNativeConfigurationModule: Module {
+public class ExpoPluginLocalizationModule: Module {
   public func definition() -> ModuleDefinition {
     Name("ExpoPluginLocalization")
 
