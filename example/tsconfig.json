@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-plugin-localization": ["../src/index"],
+      "expo-plugin-localization/*": ["../src/*"]
+    }
+  }
+}

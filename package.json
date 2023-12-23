@@ -6,6 +6,20 @@
   "author": "Digital Art Lab (https://digitalartlab.nl)",
   "license": "LGPL-3.0-or-later",
   "description": "Native language switching in your Expo app",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "open -a \"Xcode\" example/ios",
+    "open:android": "open -a \"Android Studio\" example/android",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
   "keywords": [
     "expo",
     "expo-plugin",
@@ -22,26 +36,18 @@
   "bugs": {
     "url": "https://github.com/digitalartlab/expo-plugin-localization/issues"
   },
-  "scripts": {
-    "build": "expo-module build",
-    "clean": "expo-module clean",
-    "test": "expo-module test",
-    "prepare": "expo-module prepare",
-    "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module",
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
-  },
-  "sideEffects": false,
+  "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
-    "@types/fs-extra": "^11.0.1",
-    "expo": "^48.0.11",
-    "expo-module-scripts": "^3.0.7",
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.0.11",
+    "expo-modules-core": "^1.5.11",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@types/fs-extra": "^11.0.4",
+    "eslint": "^8.56.0",
     "husky": "^8.0.3",
-    "pinst": "^3.0.0"
+    "pinst": "^3.0.0",
+    "prettier": "^3.1.1"
   },
   "peerDependencies": {
     "expo": ">=48.0.0"
@@ -50,14 +56,5 @@
     "expo": {
       "optional": true
     }
-  },
-  "packageManager": "yarn@3.5.0",
-  "files": [
-    "build/**/*",
-    "app.plugin.js",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md",
-    "SECURITY.md"
-  ]
+  }
 }
