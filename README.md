@@ -63,13 +63,46 @@ Expo has a great [Localization guide](https://docs.expo.dev/guides/localization/
 
 Basically: do what you'd already do to detect the user's language and just pick the first value you get.
 
+If you want to explicitely get the list of locales you configured, you can use the `getLocales` method. It returns an array of strings with the locales you configured.
+
+```js
+import { getLocales } from "@digitalartlab/expo-plugin-localization";
+
+const locales = getLocales();
+```
+
+> [!IMPORTANT]
+> The `getLocales` method returns the locales in the order you configured them. If you want to get the user's preferred locale (to, you know, actually support locale switching), use the Expo [Localization](https://docs.expo.dev/versions/latest/sdk/localization/) module.
+
 ## Contributing
 
 Contributions are very welcome! Please take a moment to read our [Code of Conduct](https://github.com/digitalartlab/.github/blob/main/CODE_OF_CONDUCT.md) before contributing.
 
 ## Development on this plugin
 
-Run `npm install` to install the dependencies. This repo doesn't include an example Expo app, so you'll have to create one yourself. You can install a test build of this plugin in there by running `npm pack` in this repo and `npm install <path>` in the example repo.
+Run `npm install` to install the dependencies.
+
+### Structure
+
+This project consists of two parts: an Expo module and a config plugin. They work hand in hand.
+
+First, the config plugin adds the necessary files and references to your Xcode and Android Studio projects to support native language switching. The module then optionally exposes the configured locales to your app, if you don't want to use another module like `expo-localization` for that, or need the exact locales you configured.
+
+All code for the config plugin is in the `/plugin/src` folder. For the module, the code is split between the `/src` folder for the TypeScript code and the `/ios` and `/android` folders for the native code.
+
+The `/example` folder contains a barebones Expo app that you can use to test the plugin.
+
+### Building
+
+To build the module, run `npm run build`. To build the config plugin, run `npm run build plugin`.
+
+### Commit messages
+
+This repo uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to automatically generate changelogs. Please make sure your commit messages follow this format. A Husky pre-commit hook is in place to verify this when you commit.
+
+### Publishing
+
+To publish a new version of the module, first merge the PR automatically created by Release Please. This will bump the version number, update `CHANGELOG.md` and create a new release tag on GitHub. Then, run `npm run publish` to publish the module to NPM. Could this be automated? Yes. Is it? No. Why? ¯\\\_(ツ)\_/¯
 
 ## License
 
