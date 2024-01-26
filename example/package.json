@@ -8,9 +8,12 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
-    "expo": "~49.0.15",
+    "expo": "^50.0.3",
+    "expo-linking": "~6.2.2",
+    "expo-splash-screen": "~0.26.4",
+    "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.72.6"
+    "react-native": "0.73.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
