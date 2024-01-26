@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.1.1...v2.0.0) (2024-01-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires Expo SDK 50 or newer
+* change build.gradle and podspec files for compatibility with Expo SDK 50
+
+### Bug Fixes
+
+* change build.gradle and podspec files for compatibility with Expo SDK 50 ([2c50897](https://github.com/digitalartlab/expo-plugin-localization/commit/2c50897175839bc5006d74861a1c777a8a08156f))
+
+
+### Documentation
+
+* update SECURITY for v2.0.0 ([cf37fc4](https://github.com/digitalartlab/expo-plugin-localization/commit/cf37fc4cdd88ef870f46a30827b931bcadccecdc))
+
 ## [1.1.1](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.1.0...v1.1.1) (2023-12-23)
 
 
