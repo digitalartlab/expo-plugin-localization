@@ -1,5 +1,6 @@
+import * as Linking from "expo-linking";
 import { getLocales } from "expo-plugin-localization";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
           .map((locale) => locale)
           .join(", ")}
       </Text>
+      <Button title="Open Settings" onPress={() => Linking.openSettings()} />
     </View>
   );
 }

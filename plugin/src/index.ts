@@ -11,7 +11,7 @@ import { withAndroidLocalizableResources } from "./withAndroidLocalizableResourc
 import { withIosLocalizableProject } from "./withIosLocalizableProject";
 import { withIosLocalizableResources } from "./withIosLocalizableResources";
 
-const withMyApiKey: ConfigPlugin<{ locales?: string[] }> = (
+const withNativeLocaleSwitching: ConfigPlugin<{ locales?: string[] }> = (
   config,
   { locales = ["en"] },
 ) => {
@@ -42,4 +42,4 @@ const withMyApiKey: ConfigPlugin<{ locales?: string[] }> = (
   return config;
 };
 
-export default withMyApiKey;
+export default withNativeLocaleSwitching;
