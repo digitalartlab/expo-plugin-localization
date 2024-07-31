@@ -11,12 +11,11 @@
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "husky",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "open -a \"Xcode\" example/ios",
     "open:android": "open -a \"Android Studio\" example/android",
-    "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
@@ -36,21 +35,20 @@
   "bugs": {
     "url": "https://github.com/digitalartlab/expo-plugin-localization/issues"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/react": "^18.0.25",
-    "expo-module-scripts": "^3.0.11",
-    "expo-modules-core": "^1.5.11",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/fs-extra": "^11.0.4",
+    "@types/react": "^18.0.25",
     "eslint": "^8.56.0",
-    "husky": "^8.0.3",
-    "pinst": "^3.0.0",
-    "prettier": "^3.1.1"
+    "expo": "^51.0.24",
+    "expo-module-scripts": "^3.0.11",
+    "expo-modules-core": "^1.5.11",
+    "husky": "^9.1.4",
+    "pinst": "^3.0.0"
   },
   "peerDependencies": {
-    "expo": ">=50.0.0"
+    "expo": ">=51.0.0"
   },
   "peerDependenciesMeta": {
     "expo": {
