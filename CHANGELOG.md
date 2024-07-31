@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.0.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v2.0.0...v3.0.0) (2024-07-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires Expo SDK 51
+
+### Features
+
+* upgrade for Expo 51 ([7f5c52a](https://github.com/digitalartlab/expo-plugin-localization/commit/7f5c52aa6aa1c021eca3ead41e024d9962f08b23))
+
+
+### Bug Fixes
+
+* husky blocked package installs ([2faa8b1](https://github.com/digitalartlab/expo-plugin-localization/commit/2faa8b18ef69a9f792061448a9449cd770ad58e9))
+
+
+### Documentation
+
+* update Security Policy for major release ([96b4618](https://github.com/digitalartlab/expo-plugin-localization/commit/96b4618d17d6a3f4ce2ab6040cc3aca33b4a8b90))
+
 ## [2.0.0](https://github.com/digitalartlab/expo-plugin-localization/compare/v1.1.1...v2.0.0) (2024-01-26)
 
 
