@@ -36,21 +36,20 @@
   "bugs": {
     "url": "https://github.com/digitalartlab/expo-plugin-localization/issues"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@types/react": "^18.0.25",
-    "expo-module-scripts": "^3.0.11",
-    "expo-modules-core": "^1.5.11",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/fs-extra": "^11.0.4",
+    "@types/react": "^18.0.25",
     "eslint": "^8.56.0",
+    "expo": "^51.0.24",
+    "expo-module-scripts": "^3.0.11",
+    "expo-modules-core": "^1.5.11",
     "husky": "^8.0.3",
-    "pinst": "^3.0.0",
-    "prettier": "^3.1.1"
+    "pinst": "^3.0.0"
   },
   "peerDependencies": {
-    "expo": ">=50.0.0"
+    "expo": ">=51.0.0"
   },
   "peerDependenciesMeta": {
     "expo": {
