@@ -11,9 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "expo.modules.pluginlocalization.example"
@@ -25,6 +22,6 @@
       },
       "package": "expo.modules.pluginlocalization.example"
     },
-    "plugins": [["../app.plugin.js", { "locales": ["nl", "es", "en"] }]]
+    "plugins": [["../app.plugin.js", { "locales": ["nl", "fr", "en", "de"] }]]
   }
 }
