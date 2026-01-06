@@ -1,5 +1,8 @@
 # Expo Plugin Localization
 
+> [!IMPORTANT]
+> This feature is now natively supported by the `expo-localization` config plugin. See [the Expo docs](https://docs.expo.dev/guides/localization/#enabling-per-app-language-selection-via-system-settings) for more information.
+
 [![npm version](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization.svg)](https://badge.fury.io/js/%40digitalartlab%2Fexpo-plugin-localization)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
