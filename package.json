@@ -11,13 +11,11 @@
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
-    "prepare": "husky",
+    "prepare": "expo-module prepare && husky",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
-    "open:ios": "open -a \"Xcode\" example/ios",
-    "open:android": "open -a \"Android Studio\" example/android",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
   },
   "keywords": [
     "expo",
@@ -42,17 +40,13 @@
     "@types/react": "^18.0.25",
     "eslint": "^8.56.0",
     "expo": "^51.0.24",
-    "expo-module-scripts": "^3.0.11",
-    "expo-modules-core": "^1.5.11",
-    "husky": "^9.1.4",
-    "pinst": "^3.0.0"
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.24",
+    "husky": "^9.1.4"
   },
   "peerDependencies": {
-    "expo": ">=51.0.0"
-  },
-  "peerDependenciesMeta": {
-    "expo": {
-      "optional": true
-    }
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
   }
 }
